@@ -4,121 +4,574 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexora Technologies</title>
+
+<title>NEXORA Games & Technologies</title>
+
+<meta name="description" content="NEXORA Games & Technologies creates video games, mobile applications and innovative software.">
+
 <style>
-* { box-sizing: border-box; }
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #090b10;
+  color: #fff;
   font-family: Arial, sans-serif;
-  background: #0b1020;
-  color: white;
+  line-height: 1.6;
 }
+
+:root {
+  --gold: #f2b632;
+  --blue: #168bff;
+  --dark: #090b10;
+  --panel: #151820;
+  --muted: #b8bdc8;
+}
+
 header {
-  padding: 22px;
-  text-align: center;
-  background: #111b35;
+  background: #080a0e;
+  border-bottom: 1px solid #292b30;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-header h1 { color: #55aaff; }
-nav { text-align: center; padding: 15px; }
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  display: block;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 nav a {
   color: white;
-  margin: 10px;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
 }
+
+nav a:hover {
+  color: var(--gold);
+}
+
 .hero {
-  text-align: center;
-  padding: 90px 20px;
+  min-height: 520px;
+  padding: 100px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    linear-gradient(90deg,
+    rgba(5,8,15,.98),
+    rgba(5,8,15,.75)),
+    radial-gradient(circle at 80% 40%,
+    #21436c, #090b10 65%);
 }
-.hero h2 {
-  font-size: 38px;
-  color: #55aaff;
+
+.hero-label {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-.hero p { color: #cbd5e1; }
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 75px);
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  max-width: 650px;
+  color: #c1c6d0;
+  margin: 25px 0;
+  font-size: 17px;
+}
+
 .btn {
   display: inline-block;
-  background: #1677e8;
-  color: white;
-  padding: 13px 25px;
-  border-radius: 7px;
+  background: var(--gold);
+  color: #090b10;
+  padding: 14px 25px;
   text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  width: fit-content;
+  transition: .2s;
 }
+
+.btn:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
 section {
-  padding: 45px 20px;
-  text-align: center;
+  padding: 75px 8%;
 }
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 34px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.gold {
+  color: var(--gold);
+}
+
 .services {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
+  background: #0e1118;
 }
-.service {
-  background: #17223d;
-  padding: 25px;
-  border-radius: 12px;
-  width: 260px;
+
+.cards {
+  display: grid;
+  grid-template-columns:
+  repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
 }
-footer {
+
+.card {
+  background: var(--panel);
+  padding: 30px 25px;
+  border: 1px solid #292d36;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.card .number {
+  color: var(--gold);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card h3 {
+  margin: 12px 0;
+  font-size: 21px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about {
   text-align: center;
-  padding: 25px;
-  background: #111b35;
-  color: #aaa;
+  background: #090b10;
+}
+
+.about-text {
+  max-width: 780px;
+  margin: auto;
+  color: var(--muted);
+}
+
+.vision {
+  background: #151820;
+  text-align: center;
+}
+
+.vision h2 {
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.projects {
+  background: #0e1118;
+}
+
+.project-card {
+  background: #191e29;
+  padding: 28px;
+  border-radius: 8px;
+  border-bottom: 3px solid var(--gold);
+}
+
+.project-card p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.status {
+  color: var(--gold);
+  font-size: 12px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.team {
+  text-align: center;
+  background: #090b10;
+}
+
+.ceo-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 35px;
+  background: #151820;
+  border: 1px solid #34343b;
+  border-radius: 10px;
+}
+
+.ceo-card h3 {
+  font-size: 26px;
+  color: var(--gold);
+}
+
+.ceo-card p {
+  color: var(--muted);
+}
+
+.contact {
+  background: #151820;
+  text-align: center;
+}
+
+.contact p {
+  margin: 15px 0;
+  color: var(--muted);
+}
+
+.contact a.email {
+  color: var(--gold);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  padding: 35px 15px;
+  text-align: center;
+  background: #050608;
+  border-top: 1px solid #292b30;
+  color: #9298a5;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+@media(max-width: 650px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .hero {
+    padding: 75px 7%;
+  }
+
+  section {
+    padding: 55px 7%;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>NEXORA TECHNOLOGIES</h1>
-  <p>Building the Digital Future</p>
+
+  <div class="logo">
+    NEXORA
+    <span>GAMES & TECHNOLOGIES</span>
+  </div>
+
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#services">SERVICES</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
 </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+<main>
+
+<!-- HERO SECTION -->
 
 <div class="hero" id="home">
-  <h2>Welcome to Nexora</h2>
-  <p>Software Development | Game Development | Innovation</p>
-  <a href="#services" class="btn">Explore Our Services</a>
+
+  <div class="hero-label">
+    INDEPENDENT GAMING & TECHNOLOGY BRAND
+  </div>
+
+  <h1>
+    WE CREATE <span>GAMES.</span><br>
+    WE BUILD <span>APPS.</span><br>
+    WE CREATE THE FUTURE.
+  </h1>
+
+  <p>
+    Welcome to NEXORA Games & Technologies.
+    We aim to develop exciting video games,
+    innovative mobile applications and
+    powerful software solutions.
+  </p>
+
+  <a href="#services" class="btn">
+    EXPLORE OUR WORLD →
+  </a>
+
 </div>
 
-<section id="about">
-  <h2>About Nexora</h2>
-  <p>
-    Nexora Technologies is a proposed technology brand
-    focused on software development, gaming and digital innovation.
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <h2 class="section-heading">
+    ABOUT <span class="gold">NEXORA</span>
+  </h2>
+
+  <p class="about-text">
+    NEXORA Games & Technologies is an emerging
+    technology brand based in Pakistan.
+
+    Our vision is to build original games,
+    useful applications and innovative
+    software for people around the world.
+
+    We believe in creativity, technology
+    and the power of imagination.
   </p>
+
 </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service">
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+  <h2 class="section-heading">
+    WHAT WE <span class="gold">CREATE</span>
+  </h2>
+
+  <p class="section-subtitle">
+    Our world of games, apps and technology.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>PC Games</h3>
+      <p>
+        Original PC gaming experiences,
+        interactive worlds and creative
+        gameplay concepts.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>Mobile Games</h3>
+      <p>
+        Entertaining mobile games with
+        creative mechanics and engaging
+        experiences.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>Android Apps</h3>
+      <p>
+        Useful Android applications
+        designed to make everyday tasks
+        easier.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">04</div>
       <h3>Software Development</h3>
-      <p>Websites, applications and digital solutions.</p>
+      <p>
+        Custom software, digital tools
+        and modern business solutions.
+      </p>
     </div>
-    <div class="service">
-      <h3>Game Development</h3>
-      <p>Creative PC and mobile gaming experiences.</p>
-    </div>
-    <div class="service">
-      <h3>UI & Design</h3>
-      <p>Modern interfaces and digital graphics.</p>
-    </div>
+
   </div>
+
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Our online presence is currently being developed.</p>
+<!-- VISION -->
+
+<section class="vision">
+
+  <h2>OUR MISSION</h2>
+
+  <h3>
+    INNOVATE. DEVELOP. ENTERTAIN.
+  </h3>
+
+  <p class="about-text">
+    Our mission is to create original
+    digital products and bring innovative
+    ideas to life through technology.
+  </p>
+
 </section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+  <h2 class="section-heading">
+    OUR <span class="gold">PROJECTS</span>
+  </h2>
+
+  <p class="section-subtitle">
+    Our development journey starts here.
+  </p>
+
+  <div class="cards">
+
+    <div class="project-card">
+      <h3>Upcoming PC Game</h3>
+      <p>
+        Our first original PC game project
+        is planned for future development.
+      </p>
+      <span class="status">COMING SOON</span>
+    </div>
+
+    <div class="project-card">
+      <h3>Mobile App Project</h3>
+      <p>
+        We plan to develop useful
+        Android applications.
+      </p>
+      <span class="status">PLANNING</span>
+    </div>
+
+    <div class="project-card">
+      <h3>Software Project</h3>
+      <p>
+        Our upcoming software products
+        will focus on practical digital solutions.
+      </p>
+      <span class="status">PLANNING</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CEO -->
+
+<section class="team">
+
+  <h2 class="section-heading">
+    LEADERSHIP
+  </h2>
+
+  <div class="ceo-card">
+
+    <h3>Suleman Sandhu</h3>
+
+    <p>Founder & CEO</p>
+
+    <p>
+      Leading the vision of NEXORA
+      Games & Technologies with a passion
+      for gaming and technology.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <h2 class="section-heading">
+    CONTACT <span class="gold">NEXORA</span>
+  </h2>
+
+  <p>
+    Have a business inquiry or collaboration idea?
+    Contact our team.
+  </p>
+
+  <p>
+    <strong>Founder & CEO:</strong>
+    Suleman Sandhu
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <a class="email"
+    href="mailto:nexoratechnologies46@gmail.com">
+    nexoratechnologies46@gmail.com
+    </a>
+  </p>
+
+  <br>
+
+  <a class="btn"
+  href="mailto:nexoratechnologies46@gmail.com?subject=Nexora%20Business%20Inquiry">
+    CONTACT US →
+  </a>
+
+</section>
+
+</main>
 
 <footer>
-  © 2026 Nexora Technologies. All rights reserved.
+
+  <strong>NEXORA GAMES & TECHNOLOGIES</strong>
+
+  <p>WE CREATE GAMES. WE BUILD APPS.</p>
+
+  <p>Pakistan | Global Vision</p>
+
+  <p>
+    © 2026 NEXORA Games & Technologies.
+    All rights reserved.
+  </p>
+
 </footer>
 
 </body>
